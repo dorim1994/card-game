@@ -1,3 +1,5 @@
+[바로가기](https://dorim1994.github.io/card-game/)
+
 # 8x8 카드 뒤집기 게임
 
 ## 실행
