@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8x8 카드 뒤집기 게임</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <h1>동료 사진 카드 뒤집기</h1>
+          <p>8x8 보드에서 같은 사진 2장을 찾아보세요.</p>
+        </div>
+        <button id="reset-btn" type="button">새 게임</button>
+      </header>
+
+      <section class="stats" aria-live="polite">
+        <p>시도: <strong id="moves">0</strong></p>
+        <p>맞춘 쌍: <strong id="matches">0</strong> / 32</p>
+        <p>시간: <strong id="timer">00:00</strong></p>
+      </section>
+      <section class="record" aria-live="polite">
+        <p>최고기록: <strong id="best-record">없음</strong></p>
+      </section>
+
+      <section
+        id="game-board"
+        class="board"
+        aria-label="8x8 카드 보드"
+      ></section>
+    </main>
+
+    <template id="card-template">
+      <button class="card" type="button" aria-label="카드">
+        <span class="card-face card-back">?</span>
+        <span class="card-face card-front">
+          <img alt="동료 사진 카드" />
+        </span>
+      </button>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
